@@ -1,0 +1,9 @@
+.read schema.sql
+.read user_management.sql
+.read payment_management.sql
+.read equipment_management.sql
+.read class_scheduling.sql
+.read membership_management.sql
+.read attendance_tracking.sql
+.read staff_management.sql
+.read personal_training.sql
