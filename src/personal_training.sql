@@ -1,9 +1,9 @@
 -- Initial SQLite setup
-.open fittrackpro.sqlite  -- Open the SQLite database named fittrackpro.sqlite
-.mode column  -- Set the output mode to column format
+.open fittrackpro.sqlite
+.mode column
 
 -- Enable foreign key support
-PRAGMA foreign_key = ON;  -- Enable foreign key constraints
+PRAGMA foreign_key = ON;
 
 -- Personal Training Queries
 

@@ -145,7 +145,7 @@ CREATE TABLE personal_training_sessions (
     staff_id INTEGER NOT NULL,
     session_date DATE NOT NULL,
     start_time TIME NOT NULL,
-    end_time TIME NOT NULL,
+    end_time TIME CHECK (end_time > start_time) NOT NULL,
     notes VARCHAR(255) CHECK (length(notes) <= 255) NOT NULL,
     FOREIGN KEY (member_id) REFERENCES members(member_id),
     FOREIGN KEY (staff_id) REFERENCES staff(staff_id)

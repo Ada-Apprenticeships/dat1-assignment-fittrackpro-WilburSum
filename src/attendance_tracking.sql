@@ -1,9 +1,9 @@
 -- Initial SQLite setup
-.open fittrackpro.sqlite -- Open the SQLite database file
-.mode column -- Set the output mode to column
+.open fittrackpro.sqlite
+.mode column
 
 -- Enable foreign key support
-PRAGMA foreign_key = ON; -- Enable foreign key constraints
+PRAGMA foreign_key = ON;
 
 -- Attendance Tracking Queries
 
