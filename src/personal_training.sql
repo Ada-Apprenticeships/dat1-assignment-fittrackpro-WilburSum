@@ -19,14 +19,9 @@ SELECT
 FROM 
     personal_training_sessions AS pt  -- From the personal_training_sessions table
 JOIN 
-    members AS m  -- Join with the members table
-ON
-    pt.member_id = m.member_id  -- On matching member_id
+    members AS m ON pt.member_id = m.member_id -- Join with the members table, on matching member_id
 JOIN 
-    staff AS s  -- Join with the staff table
-ON
-    pt.staff_id = s.staff_id  -- On matching staff_id
+    staff AS s ON pt.staff_id = s.staff_id -- Join with the staff table, on matching staff_id
 WHERE
     s.first_name = 'Ivy'  -- Where the staff's first name is 'Ivy'
-    AND
-    s.last_name = 'Irwin';  -- And the staff's last name is 'Irwin'
+    AND s.last_name = 'Irwin';  -- And the staff's last name is 'Irwin'

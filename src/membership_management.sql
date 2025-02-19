@@ -10,10 +10,16 @@ PRAGMA foreign_key = ON;
 -- 1. List all active memberships
 -- TODO: Write a query to list all active memberships
 
-SELECT m.member_id, m.first_name, m.last_name, ms.type AS membership_type, ms.start_date  -- Select member details and membership type
-FROM members AS m  -- From the members table
-JOIN memberships AS ms  -- Join with the memberships table
-ON m.member_id = ms.member_id  -- On matching member_id
+SELECT 
+    m.member_id, 
+    m.first_name, 
+    m.last_name, 
+    ms.type AS membership_type, 
+    ms.start_date  -- Select member details and membership type
+FROM 
+    members AS m  -- From the members table
+JOIN 
+    memberships AS ms ON m.member_id = ms.member_id -- Join with the memberships table, On matching member_id
 WHERE ms.status = 'Active';  -- Where the membership status is 'Active'
 
 -- 2. Calculate the average duration of gym visits for each membership type
@@ -43,4 +49,5 @@ FROM
 JOIN 
     memberships ms ON m.member_id = ms.member_id  -- Join with the memberships table on matching member_id
 WHERE 
-    ms.end_date BETWEEN DATE('now') AND DATE('now', '+1 year');  -- Where the membership end date is within the next year
+    ms.end_date BETWEEN DATE('now') 
+    AND DATE('now', '+1 year');  -- Where the membership end date is within the next year
